@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>HTML Enhanced Form</title>
+  </head>
+  <body>
+    <header>
+      <img src="Cafe.png" width="200" alt="Cafe Logo">
+    </header>
+
+    <h1>Café Menu</h1>
+
+    <h3>Desserts</h3>
+    <ol>
+      <li>Chocolate Cake</li>
+      <li>Vanilla Ice Cream</li>
+      <li>Strawberry Cheesecake</li>
+    </ol>
+
+    <h3>Drinks</h3>
+    <ol>
+      <li>Mango Smoothie</li>
+      <li>Iced Coffee</li>
+      <li>Green Tea</li>
+      <li>Lemonade</li>
+    </ol>
+
+    <h3>Available Snacks</h3>
+    <ol>
+      <li>Chicken Sandwich</li>
+      <li>Veggie Wrap</li>
+      <li>French Fries</li>
+    </ol>
+
+    <h2>Price</h2>
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Items</th>
+          <th>Price</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Drinks</td>
+          <td>$20</td>
+        </tr>
+        <tr>
+          <td>Desserts</td>
+          <td>$20</td>
+        </tr>
+        <tr>
+          <td>Available Snacks</td>
+          <td>$20</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>New Recipe</h2>
+    <ol type="i">
+      <li>Tomato Soup</li>
+      <li>Cheeseburger</li>
+      <li>Croissants</li>
+      <li>Muffins</li>
+      <li>Bagels</li>
+      <li>Scones</li>
+    </ol>
+
+    <h2>Most Loved Snack</h2>
+    <h4>Chicken Sandwich</h4>
+    <img src="Chicken.jpeg" width="200" alt="Chicken Sandwich">
+
+    <h2>Place Your Order</h2>
+    <form action="order.php" method="post" enctype="multipart/form-data" autocomplete="on">
+      
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        <br><br>
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" placeholder="example@email.com" required>
+        <br><br>
+
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="0712345678" pattern="[0-9]{10}" required>
+      </fieldset>
+      <br>
+
+      <fieldset>
+        <legend>Order Details</legend>
+        <label for="location">Delivery Location:</label>
+        <input type="text" id="location" name="location" placeholder="Your delivery address" required>
+        <br><br>
+
+        <label for="payment">Payment Method:</label>
+        <select id="payment" name="payment" required>
+          <option value="">--Select Payment Method--</option>
+          <option value="cash">Cash on Delivery</option>
+          <option value="card">Credit/Debit Card</option>
+          <option value="mpesa">M-Pesa</option>
+        </select>
+        <br><br>
+
+        <label>Extras:</label><br>
+        <input type="checkbox" id="extra1" name="extras" value="extra sauce">
+        <label for="extra1">Extra Sauce</label>
+        <input type="checkbox" id="extra2" name="extras" value="cheese">
+        <label for="extra2">Extra Cheese</label>
+        <br><br>
+
+        <label for="orderdate">Preferred Delivery Date:</label>
+        <input type="date" id="orderDate" name="orderDate" required>
+        <br><br>
+
+        <label for="file">Upload Receipt (optional):</label>
+        <input type="file" id="file" name="file">
+      </fieldset>
+      <br><br>
+
+      <fieldset>
+        <legend>Review</legend>
+        <label for="review">Write Your Review:</label><br>
+        <textarea id="review" name="review" rows="4" cols="50" placeholder="Your feedback here..." minlength="10" required></textarea>
+      </fieldset>
+      <br><br>
+
+      <input type="submit" value="Submit Order">
+      <input type="reset" value="Reset Form">
+    </form>
+
+    <footer>
+      &copy; Maimuna Cafe Inspo 2025
+    </footer>
+  </body>
+</html>
